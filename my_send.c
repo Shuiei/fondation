@@ -7,7 +7,11 @@ int my_send(int sock)
   my_putstr("Prompt-> ");
   reader = readLine();
   if (write(sock, reader, strlen(reader)) != my_strlen(reader))
+    {
+      free(reader);
       return (EXIT_FAILURE);
+    }
+  free(reader);
   return (EXIT_SUCCESS);
 }
 

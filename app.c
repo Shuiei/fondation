@@ -19,8 +19,8 @@ int app(char *ip, char *port)
 	  {
 		while(1)
 		{
-	    	check_my_send(sock);
-	    	my_recv(sock);
+		  check_my_send(sock);
+		  my_recv(sock);
 		}
 	  }
 	else

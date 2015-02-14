@@ -9,7 +9,7 @@
 ##
 NAME= fondation
 
-CC= gcc-4.9
+CC= gcc
 
 RM= rm -f
 
