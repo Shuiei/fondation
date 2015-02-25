@@ -13,6 +13,11 @@
 #define SOCKET_ERROR -1
 #define closesocket(s) close(s)
 
+#define RED     "\033[1;31m"
+#define WHITE   "\033[0;m"
+#define GREEN   "\033[1;32m"
+#define BLUE    "\033[1;34m"
+
 typedef int SOCKET;
 typedef struct sockaddr_in SOCKADDR_IN;
 typedef struct sockaddr SOCKADDR;
@@ -22,3 +27,6 @@ void	my_putstr(char *str);
 int	my_strcmp(char *s1, char *s2);
 int	my_getnbr(char *str);
 int	my_strlen(char *str);
+void	message_connection1();
+void	message_connection2();
+void	failed_connection();

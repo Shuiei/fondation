@@ -13,6 +13,6 @@ char        *readLine()
     buff[ret - 1] = '\0';
     return (buff);
   }
-  buff[0] = '\0';
+  buff[0] = '\n';
   return (buff);
 }

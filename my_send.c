@@ -2,24 +2,31 @@
 
 int my_send(int sock)
 {
-  char *reader;;
+  char *reader;
 
   my_putstr("Prompt-> ");
-  reader = readLine();
-  if (write(sock, reader, strlen(reader)) != my_strlen(reader))
+  if ((reader = readLine()) == NULL)
+    return (EXIT_FAILURE);
+  if (my_strcmp(reader, "/bye") == 0)
     {
       free(reader);
       return (EXIT_FAILURE);
     }
+  write(sock, reader, strlen(reader));
   free(reader);
   return (EXIT_SUCCESS);
 }
 
-void check_my_send(int sock)
+int check_my_send(int sock)
 {
   int ret_send;
 
-  ret_send = my_send(sock);
-  if (ret_send == EXIT_FAILURE)
-    my_putstr("Error while writing on the server\n");
+  if ((ret_send = my_send(sock)) == EXIT_FAILURE)
+    {
+      my_putstr(RED);
+      my_putstr("Connection Terminated\n");
+      my_putstr(WHITE);
+      return (EXIT_FAILURE);
+    }
+  return (EXIT_SUCCESS);
 }

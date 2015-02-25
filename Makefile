@@ -7,7 +7,7 @@
 ## Started on  Fri Oct 24 17:38:07 2014 BENE Thibaut
 ## Last update Mon Oct 27 12:30:13 2014 BENE Thibaut
 ##
-NAME= fondation
+NAME= bin/fondation
 
 CC= gcc
 
