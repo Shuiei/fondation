@@ -1,6 +1,15 @@
+/*
+** helper.c for helper.c in /home/bene_t/Semaine2/Jour03/bene_t/my_strlen
+** 
+** Made by BENE Thibaut
+** Login   <bene_t@etna-alternance.net>
+** 
+** Started on  Wed Jan 26 11:50:18 2014 BENE Thibaut
+** Last update Wed Jan 26 12:33:49 2014 BENE Thibaut
+*/
 #include "helpers.h"
 
-int check_argc(int argc)
+int	check_argc(int argc)
 {
   if (argc < 5)
     {
@@ -10,7 +19,7 @@ int check_argc(int argc)
   return (EXIT_SUCCESS);
 }
 
-int check_ip_arg(char *ip)
+int	check_ip_arg(char *ip)
 {
   if (my_strcmp(ip, "--ip") == 0)
     return (EXIT_SUCCESS);
@@ -18,7 +27,7 @@ int check_ip_arg(char *ip)
   return (EXIT_FAILURE);
 }
 
-int check_port_arg(char *port)
+int	check_port_arg(char *port)
 {
   if (my_strcmp(port, "--port") == 0)
     return (EXIT_SUCCESS);
@@ -26,7 +35,7 @@ int check_port_arg(char *port)
   return (EXIT_FAILURE);
 }
 
-int check_port_value(char *port)
+int	check_port_value(char *port)
 {
   int i;
   i = 0;
@@ -44,7 +53,7 @@ int check_port_value(char *port)
   return (EXIT_SUCCESS);
 }
 
-void error_message()
+void	error_message()
 {
   my_putstr("USAGE: ./fondation --ip <ip> --port <port>\n");
 }

@@ -1,6 +1,15 @@
+/*
+** send.c for send.c in /home/bene_t/Semaine2/Jour03/bene_t/my_strlen
+** 
+** Made by BENE Thibaut
+** Login   <bene_t@etna-alternance.net>
+** 
+** Started on  Wed Jan 26 11:50:18 2014 BENE Thibaut
+** Last update Wed Jan 26 12:33:49 2014 BENE Thibaut
+*/
 #include "my_send.h"
 
-int my_send(int sock)
+int	my_send(int sock)
 {
   char *reader;
 
@@ -17,7 +26,7 @@ int my_send(int sock)
   return (EXIT_SUCCESS);
 }
 
-int check_my_send(int sock)
+int	check_my_send(int sock)
 {
   int ret_send;
 

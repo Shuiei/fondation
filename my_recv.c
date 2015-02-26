@@ -1,10 +1,20 @@
+/*
+** my_recv.c for my_recv.c in /home/bene_t/Semaine2/Jour03/bene_t/my_strlen
+** 
+** Made by BENE Thibaut
+** Login   <bene_t@etna-alternance.net>
+** 
+** Started on  Wed Jan 26 11:50:18 2014 BENE Thibaut
+** Last update Wed Jan 26 12:33:49 2014 BENE Thibaut
+*/
 #include "my_recv.h"
 
-int my_recv(int sock)
+int	my_recv(int sock)
 {
   char	buf[BUF_SIZE];
   int	r;
-  int	ret;
+  int
+	ret;
   int	start;
   start = -1;
 
@@ -20,7 +30,7 @@ int my_recv(int sock)
   return (EXIT_SUCCESS);
 }
 
-int display(char tab[], int *start)
+int	display(char tab[], int *start)
 {
   int i;
   i = 0;
